@@ -8,5 +8,83 @@
 // ingat bahwa setiap huruf harus dtambah "-" sebagai penghubung
 
 
-let str = 'saya';
-console.log(str.split(''));
+let word = "ricky";
+let result = "";
+
+// for (let i = 0; i < word.length; i++) {
+//     if (i === 0) {
+//         result += word[i].toUpperCase();
+//     } else {
+//         result += word[i].toUpperCase();
+//         result += word[i].repeat(i);
+//     }
+
+//     if (i < word.length - 1) {
+//         result += "-"
+//     }
+// }
+
+// for (let i = 0; i < word.length; i++) {
+//     for (let j = 0; j < i + 1; j++) {
+//         if(j == 0){
+//             result += word[i].toUpperCase()
+//         }else{
+//             result += word[i]
+//         }
+//     }
+//     if(i != word.length - 1){
+//         result += '-'
+//     }
+// }
+
+// let i = 0;
+// while (i < word.length) {
+//     let j = 0;
+//     while (j <= i) {
+//         if (j == 0) {
+//             result += word[i].toUpperCase();
+//         } else {
+//             result += word[i];
+//         }
+//         j++;
+//     }
+//     if (i !== word.length - 1) {
+//         result += "-";
+//     }
+
+//     i++;
+// }
+
+// for (let i = 0; i < word.length; i++) {
+//     let j = 0;
+//     while (j <= i) {
+//         if (j === 0) {
+//             result += word[i].toUpperCase();
+//         } else {
+//             result += word[i];
+//         }
+//         j++;
+//     }
+
+//     if (i !== word.length - 1) {
+//         result += "-";
+//     }
+// }
+
+let i = 0;
+while (i < word.length) {
+    for (let j = 0; j <= i; j++) {
+        if (j === 0) {
+            result += word[i].toUpperCase();
+        } else {
+            result += word[i];
+        }
+    }
+    if (i !== word.length - 1) {
+        result += "-";
+    }
+
+    i++;
+}
+
+console.log(result);
